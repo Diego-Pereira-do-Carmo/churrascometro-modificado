@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 300px;
+    max-width: 350px;
     margin: auto;
     margin-top: 50px;
     background-color: aliceblue;
@@ -27,4 +27,8 @@ button {
 #resultado {
     text-align: center;
    
+}
+
+small{
+    color: red;
 }
