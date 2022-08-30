@@ -11,7 +11,9 @@ function calcular() {
     let duracao = qtDuracao.value;
 
     let carneTT = (adulto * carnePP(duracao) + (crianca * carnePP(duracao) / 2))/1000;
-    // carneTT = Math.ceil(carneTT);
+    let linguicaTT = (adulto * linguicaPP(duracao) + (crianca * linguicaPP(duracao) / 2))/1000;
+    let frangoTT = (adulto * frangoPP(duracao) + (crianca * frangoPP(duracao) / 2))/1000;
+    
     let cervejaTT = (adulto * cervejaPP(duracao))/355;
     cervejaTT = Math.ceil(cervejaTT);
     let bebidaTT = (adulto * bebidaPP(duracao) + (crianca * bebidaPP(duracao) / 2))/2000;
@@ -20,6 +22,8 @@ function calcular() {
     resultado.innerHTML = `<hr>`;
     resultado.innerHTML += `<h3>Carnes</h3>`;
     resultado.innerHTML += `<p>${carneTT} kg de Carne</p>`;
+    resultado.innerHTML += `<p>${linguicaTT} kg de Linguiça</p>`;
+    resultado.innerHTML += `<p>${frangoTT} kg de Frango</p>`;
     resultado.innerHTML += `<hr>`;
     resultado.innerHTML += `<h3>Bebidas</h3>`;
     resultado.innerHTML += `<p>${cervejaTT} Latas de Cerveja (355 ml)</p>`;
@@ -36,9 +40,25 @@ function custar(){
 
 function carnePP(duracao) {
     if (duracao >= 6) {
-        return 650
+        return 270
     } else {
-        return 400
+        return 200
+    }
+}
+
+function linguicaPP(duracao) {
+    if (duracao >= 6) {
+        return 240
+    } else {
+        return 180
+    }
+}
+
+function frangoPP(duracao) {
+    if (duracao >= 6) {
+        return 200
+    } else {
+        return 120
     }
 }
 
