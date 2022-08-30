@@ -18,11 +18,19 @@ function calcular() {
     bebidaTT = Math.ceil(bebidaTT); 
 
     resultado.innerHTML = `<hr>`;
+    resultado.innerHTML += `<h3>Carnes</h3>`;
     resultado.innerHTML += `<p>${carneTT} kg de Carne</p>`;
+    resultado.innerHTML += `<hr>`;
+    resultado.innerHTML += `<h3>Bebidas</h3>`;
     resultado.innerHTML += `<p>${cervejaTT} Latas de Cerveja (355 ml)</p>`;
     resultado.innerHTML += `<p>${bebidaTT} garrafas de Refrigerante (2L)</p>`;
+    custo.innerHTML = `<button onclick="custar()">Calcular o custo(R$)</button>`;
 }
 
+
+function custar(){
+    console.log("valor em reais");
+}
 
 
 
