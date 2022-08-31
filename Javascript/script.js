@@ -27,13 +27,6 @@ function calcular() {
     let bebidaTT = (adulto * bebidaPP(duracao) + (crianca * bebidaPP(duracao) / 2)) / 2000;
     bebidaTT = Math.ceil(bebidaTT);
 
-    //                                Acompanhamentos
-    // pao de alho e queijo coalho receberam a mesma proporção
-    let paoEqueijoTT = (adulto * paoEqueijoPP(duracao) + (crianca * paoEqueijoPP(duracao) / 2));
-    paoEqueijoTT = Math.ceil(paoEqueijoTT);
-    let farofaTT = (adulto * farofaPP(duracao) + (crianca * farofaPP(duracao) / 2));
-    farofaTT = Math.ceil(farofaTT);
-
     //                                suprimentos
     let descartaveisTT = (adulto * descartaveisPP(duracao) + (crianca * descartaveisPP(duracao)));
    
@@ -53,18 +46,13 @@ function calcular() {
     resultado.innerHTML += `<h3>Bebidas</h3>`;
     resultado.innerHTML += `<p>${cervejaTT} Latas de Cerveja (355 ml)</p>`;
     resultado.innerHTML += `<p>${bebidaTT}  Refrigerante (2L)</p>`;
-    resultado.innerHTML += `<hr>`;
-    resultado.innerHTML += `<h3>Acompanhamentos</h3>`;
-    resultado.innerHTML += `<p>${paoEqueijoTT} Pães de Alho (un)</p>`;
-    // O mesmo parametro foi usado no pao de alho e no queijo coalho, pois as proporções são iguais
-    resultado.innerHTML += `<p>${paoEqueijoTT} Queijo Coalho (un)</p>`;
-    resultado.innerHTML += `<p>${farofaTT} Farofa (g)</p>`;
+
     resultado.innerHTML += `<hr>`;
     resultado.innerHTML += `<h3>Suprimentos</h3>`;
     resultado.innerHTML += `<p>${carvao()} Kg Carvão</p>`;
     resultado.innerHTML += `<p>${descartaveisTT} Descartáveis (un)<br>
-    <small> Descartaveis = pratos, talheres, copos e guardanapos</p>`;
-    resultado.innerHTML += `<button onclick="custar()">Calcular o custo (R$)</button>`;
+    <small> Descartaveis = pratos, talheres, copos</small></p>`;
+    resultado.innerHTML += `<button onclick="custar()">Custo (R$)</button>`;
 }
 // __________________________________________________________________________________________________________________
 
@@ -84,9 +72,21 @@ function custar() {
     custoLinguica = Math.ceil(custoLinguica);
     let custoFrango = frangoTT * 12;
     custoFrango = Math.ceil(custoFrango);
+
+
+    custo.innerHTML = `<input id="valorCarne" name="ValorCarne" type="number" placeholder="Preço por KG de Carne"></input>`;
+    custo.innerHTML += `<input id="valorlinguica" name="valorlinguica" type="number" placeholder="Preço por KG de Linguiça"></input>`;
+    custo.innerHTML += `<input id="valorFrango" name="valorFrango" type="number" placeholder="Preço por KG de Frango"></input>`;
+
+    custo.innerHTML += `<input id="valorCerveja" name="valorCerveja" type="number" placeholder="Preço da Lata (355ml)"></input>`;
+    custo.innerHTML += `<input id="valorRefrigerante" name="valorRefrigerante" type="number" placeholder="Preço da Garrafa (2L)"></input>`;
+
+    custo.innerHTML += `<input id="valorCarvao" name="valorCarvao" type="number" placeholder="Preço por Kg de carvão"></input>`;
+    custo.innerHTML += `<input id="valorDescartaveis" name="valorDescartaveis" type="number" placeholder="Preço dos Descartaveis (UN)"></input>
+    <small>O preço incerido nos descartáveis será multiplicado por 3 (prato, copo e talheres)</small>`;
     
   
-    custo.innerHTML = `<hr>`;
+    custo.innerHTML += `<hr>`;
     custo.innerHTML += `<h3>Custo das Carnes</h3>`;
     custo.innerHTML += `<p>R$ ${custoCarne},00 de Carne</p>`;
     custo.innerHTML += `<p>R$ ${custoLinguica},00 de Linguiça</p>`;
@@ -135,25 +135,6 @@ function bebidaPP(duracao) {
         return 1500
     } else {
         return 1000
-    }
-}
-
-// No caso do pão de alho e do queijo coalho as proporções por pessoas são iguais, então usarei a mesma função
-// para os dois
-function paoEqueijoPP(duracao) {
-    if (duracao >= 6) {
-        return 2
-    } else {
-        return 1
-    }
-}
-
-
-function farofaPP(duracao) {
-    if (duracao >= 6) {
-        return 80
-    } else {
-        return 40
     }
 }
 
