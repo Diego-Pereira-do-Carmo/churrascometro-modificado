@@ -64,14 +64,33 @@ function calcular() {
     resultado.innerHTML += `<p>${carvao()} Kg Carvão</p>`;
     resultado.innerHTML += `<p>${descartaveisTT} Descartáveis (un)<br>
     <small> Descartaveis = pratos, talheres, copos e guardanapos</p>`;
-    custo.innerHTML = `<button onclick="custar()">Calcular o custo(R$)</button>`;
+    resultado.innerHTML += `<button onclick="custar()">Calcular o custo (R$)</button>`;
 }
 // __________________________________________________________________________________________________________________
 
 
 // função para fazer o calculo do custo
 function custar() {
-    console.log("valor em reais");
+    let adulto = qtAdultos.value;
+    let crianca = qtCriancas.value;
+    let duracao = qtDuracao.value;
+    
+    let carneTT = (adulto * carnePP(duracao) + (crianca * carnePP(duracao) / 2)) / 1000;
+    let linguicaTT = (adulto * linguicaPP(duracao) + (crianca * linguicaPP(duracao) / 2)) / 1000;
+    let frangoTT = (adulto * frangoPP(duracao) + (crianca * frangoPP(duracao) / 2)) / 1000;
+    let custoCarne = (carneTT * 20);
+    custoCarne = Math.ceil(custoCarne);
+    let custoLinguica = linguicaTT * 15;
+    custoLinguica = Math.ceil(custoLinguica);
+    let custoFrango = frangoTT * 12;
+    custoFrango = Math.ceil(custoFrango);
+    
+  
+    custo.innerHTML = `<hr>`;
+    custo.innerHTML += `<h3>Custo das Carnes</h3>`;
+    custo.innerHTML += `<p>R$ ${custoCarne},00 de Carne</p>`;
+    custo.innerHTML += `<p>R$ ${custoLinguica},00 de Linguiça</p>`;
+    custo.innerHTML += `<p>R$ ${custoFrango},00 de Frango</p>`;
 }
 //____________________________________________________________________________________________________________________
 

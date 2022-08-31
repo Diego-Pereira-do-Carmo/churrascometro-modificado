@@ -25,10 +25,17 @@ button {
 }
 
 #resultado {
+    width: 100%;
     text-align: center;
    
 }
 
 small{
     color: red;
+}
+
+#custo {
+    width: 100%;
+    text-align: center;
+    
 }
