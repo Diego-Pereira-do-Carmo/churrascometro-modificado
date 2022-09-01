@@ -1,16 +1,45 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    font-family: "Poppins", sans-serif;
+    background-image: url(../IMG/15837.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+ }
+
+
 .container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 350px;
-    margin: auto;
-    margin-top: 50px;
-    background-color: aliceblue;
+    width: 20vw;
+    height: 90vh;
+    background: linear-gradient(#ffff00, #ffa500, #ff0000);
     border-radius: 10px;
     padding: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px 0px #AAA;
 }
 
 input{
@@ -25,22 +54,39 @@ button {
 }
 
 #quantidade {
-    width: 100%;
     text-align: center;
-   
+    width: 20vw;
+    height: 90vh;
+    background: linear-gradient(#ffff00, #ffa500, #ff0000);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px #AAA;
 }
+
 
 small{
     color: red;
 }
 
 #custo {
-    width: 100%;
-    text-align: center;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 90vh;
+    background: linear-gradient(#ffff00, #ffa500, #ff0000);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px #AAA;
 }
 
 #resultado {
-    width: 100%;
     text-align: center;
+    width: 20vw;
+    height: 90vh;
+    background: linear-gradient(#ffff00, #ffa500, #ff0000);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px #AAA;
 }

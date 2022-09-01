@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +8,18 @@
     <link rel="stylesheet" href="./CSS/styles.css">
     <title>Churrascômetro</title>
 </head>
-<body>
-    <div class="container">
-        <h1>Churrascômetro</h1>
-        <input id="adulto" name="adulto" type="number" placeholder="Adultos">
-        <input id="crianca" name="crianca" type="number" placeholder="Crianças">
-        <input id="duracao" name="duracao" type="number" placeholder="Duração (h)">
-        <button onclick="calcular()">Mostrar Quantidades</button>
 
-        <div id="quantidade">   
+<body>
+    <main>
+        <div class="container">
+            <h1>Churrascômetro</h1>
+            <input id="adulto" name="adulto" type="number" placeholder="Adultos">
+            <input id="crianca" name="crianca" type="number" placeholder="Crianças">
+            <input id="duracao" name="duracao" type="number" placeholder="Duração (h)">
+            <button onclick="calcular()">Mostrar Quantidades</button>
+        </div>
+
+        <div id="quantidade">
         </div>
 
         <div id="custo">
@@ -23,9 +27,8 @@
 
         <div id="resultado">
         </div>
-    </div>
-    
-
+    </main>
     <script src="./Javascript/script.js"></script>
 </body>
+
 </html>

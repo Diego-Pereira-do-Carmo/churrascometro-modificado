@@ -37,8 +37,7 @@ function calcular() {
 
 
     // adicionando os mantimentos na div "quantidade" e colocando o botão para fazer o culculo do custo
-    quantidade.innerHTML = `<hr>`;
-    quantidade.innerHTML += `<h3>Carnes</h3>`;
+    quantidade.innerHTML = `<h3>Carnes</h3>`;
     quantidade.innerHTML += `<p>${carneTT} kg de Carne</p>`;
     quantidade.innerHTML += `<p>${linguicaTT} kg de Linguiça</p>`;
     quantidade.innerHTML += `<p>${frangoTT} kg de Frango</p>`;
@@ -63,7 +62,8 @@ function custar() {
     // criando os inputs de custo
 
     //                                                        Tipos de Carnes
-    custo.innerHTML = `<input id="valorCarne" name="ValorCarne" type="number" placeholder="Preço por KG de Carne" value=""></input>`;
+    custo.innerHTML = `<h3>Incira os preços de cada item</h3>`;
+    custo.innerHTML += `<input id="valorCarne" name="ValorCarne" type="number" placeholder="Preço por KG de Carne" value=""></input>`;
     custo.innerHTML += `<input id="valorLinguica" name="valorLinguica" type="number" placeholder="Preço por KG de Linguiça"></input>`;
     custo.innerHTML += `<input id="valorFrango" name="valorFrango" type="number" placeholder="Preço por KG de Frango"></input>`;
 
@@ -139,9 +139,7 @@ function calculoTT() {
     let custoTT = custoCarne + custoLinguica + custoFrango + custoCerveja + custoRefrigerante + custoCarvao + (custoDescartaveis);
     custoTT = Math.ceil(custoTT);
 
-
-    resultado.innerHTML = `<hr>`;
-    resultado.innerHTML += `<h3>Custo das Carnes</h3>`;
+    resultado.innerHTML = `<h3>Custo das Carnes</h3>`;
     resultado.innerHTML += `<p>R$ ${custoCarne},00 de Carne</p>`;
     resultado.innerHTML += `<p>R$ ${custoLinguica},00 de Linguiça</p>`;
     resultado.innerHTML += `<p>R$ ${custoFrango},00 de Frango</p>`;
