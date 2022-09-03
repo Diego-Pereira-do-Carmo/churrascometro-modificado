@@ -37,20 +37,54 @@ function calcular() {
 
 
     // adicionando os mantimentos na div "quantidade" e colocando o botão para fazer o culculo do custo
-    quantidade.innerHTML = `<h3>Carnes</h3>`;
-    quantidade.innerHTML += `<p>${carneTT} kg de Carne</p>`;
-    quantidade.innerHTML += `<p>${linguicaTT} kg de Linguiça</p>`;
-    quantidade.innerHTML += `<p>${frangoTT} kg de Frango</p>`;
-    quantidade.innerHTML += `<hr>`;
-    quantidade.innerHTML += `<h3>Bebidas</h3>`;
-    quantidade.innerHTML += `<p>${cervejaTT} Latas de Cerveja (355 ml)</p>`;
-    quantidade.innerHTML += `<p>${bebidaTT}  Refrigerante (2L)</p>`;
+   
+    quantidade.innerHTML = `<h3>Tipos de Carnes</h3>`; 
+    quantidade.innerHTML += 
+    `<div class="box">
+    <img src="../IMG/meat.svg" width="45"/>
+      <p>${carneTT} kg de Carne</p>
+    </div>`;
+   
+    quantidade.innerHTML += 
+    `<div class="box">
+    <img src="../IMG/sausage.svg" width="45"/>
+      <p>${linguicaTT} kg de Linguiça</p>
+    </div>`;
 
-    quantidade.innerHTML += `<hr>`;
+    quantidade.innerHTML += 
+    `<div class="box">
+    <img src="../IMG/chicken.svg" width="45"/>
+      <p>${frangoTT} kg de Frango</p>
+    </div>`;
+
+    quantidade.innerHTML += `<h3>Bebidas</h3>`;
+    quantidade.innerHTML += 
+    `<div class="box">
+    <img src="../IMG/beer.svg" width="45"/>
+      <p>${cervejaTT} Latas de Cerveja (355 ml)</p>
+    </div>`;
+
+    quantidade.innerHTML += 
+    `<div class="box">
+    <img src="../IMG/soda.svg" width="45"/>
+      <p>${bebidaTT} Refrigerante (2L)</p>
+    </div>`;
+
     quantidade.innerHTML += `<h3>Suprimentos</h3>`;
-    quantidade.innerHTML += `<p>${carvao()} Kg Carvão</p>`;
-    quantidade.innerHTML += `<p>${descartaveisTT} Descartáveis (un)<br>
-    <small> Descartaveis = pratos, talheres, copos</small></p>`;
+
+    quantidade.innerHTML += 
+    `<div class="box">
+    <img src="../IMG/coal.svg" width="45"/>
+      <p>${carvao()} Kg Carvão</p>
+    </div>`;
+
+    quantidade.innerHTML += 
+    `<div class="box">
+    <img src="../IMG/cutlery.svg" width="45"/>
+      <p>${descartaveisTT} Descartáveis (un)<br>
+      <small> Descartaveis = pratos, talheres, copos</small></p>
+    </div>`;
+
     quantidade.innerHTML += `<button onclick="custar()">Custo (R$)</button>`;
 }
 // __________________________________________________________________________________________________________________
@@ -139,21 +173,34 @@ function calculoTT() {
     let custoTT = custoCarne + custoLinguica + custoFrango + custoCerveja + custoRefrigerante + custoCarvao + (custoDescartaveis);
     custoTT = Math.ceil(custoTT);
 
-    resultado.innerHTML = `<h3>Custo das Carnes</h3>`;
-    resultado.innerHTML += `<p>R$ ${custoCarne},00 de Carne</p>`;
-    resultado.innerHTML += `<p>R$ ${custoLinguica},00 de Linguiça</p>`;
-    resultado.innerHTML += `<p>R$ ${custoFrango},00 de Frango</p>`;
-    resultado.innerHTML += `<hr>`;
-    resultado.innerHTML += `<h3>Custo das Bebidas</h3>`;
-    resultado.innerHTML += `<p>R$ ${custoCerveja},00 de Cerveja</p>`;
-    resultado.innerHTML += `<p>R$ ${custoRefrigerante},00 de Refrigerante</p>`;
-    resultado.innerHTML += `<hr>`;
-    resultado.innerHTML += `<h3>Custo dos Suprimentos</h3>`;
-    resultado.innerHTML += `<p>R$ ${custoCarvao},00 de Carvão</p>`;
-    resultado.innerHTML += `<p>R$ ${custoDescartaveis},00 dos Descartáveis</p>`;
-    resultado.innerHTML += `<hr>`;
-    resultado.innerHTML += `<h3>Custo Total</h3>`;
-    resultado.innerHTML += `<p>R$ ${custoTT},00 do Churrasco</p>`;
+    resultado.innerHTML += 
+    `<div class="resultado-box">
+    <h3>Custo das Carnes</h3>
+    <p>R$ ${custoCarne},00 de Carne</p>
+    <p>R$ ${custoLinguica},00 de Linguiça</p>
+    <p>R$ ${custoFrango},00 de Frango</p>
+    </div>`;
+
+    resultado.innerHTML += 
+    `<div class="resultado-box">
+    <h3>Custo das Bebidas</h3>
+    <p>R$ ${custoCerveja},00 de Cerveja</p>
+    <p>R$ ${custoRefrigerante},00 de Refrigerante</p>
+    </div>`;
+
+    resultado.innerHTML += 
+    `<div class="resultado-box">
+    <h3>Custo dos Suprimentos</h3>
+    <p>R$ ${custoCarvao},00 de Carvão</p>
+    <p>R$ ${custoDescartaveis},00 dos Descartáveis</p>
+    </div>`;
+
+    resultado.innerHTML += 
+    `<div class="resultado-box">
+    <h3>Custo Total</h3>
+    <p>R$ ${custoTT},00 do Churrasco</p>
+    </div>`;
+
     resultado.innerHTML += `<button onclick="location.reload()">Nova Cotação</button>`;
 }
 

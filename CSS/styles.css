@@ -4,89 +4,145 @@
 }
 
 body {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: center; */
-    /* justify-content: center; */
     font-family: "Poppins", sans-serif;
-    background-image: url(../IMG/15837.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
 }
 
 main{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     text-align: center;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 h1 {
-    text-align: center;
+    
  }
 
+ #logo-container {
+    width: 100%;
+    margin-bottom: 3rem;
+ }
 
 .container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 20vw;
-    height: 90vh;
-    background: linear-gradient(#ffff00, #ffa500, #ff0000);
+    justify-content: space-between;
+    width: 24vw;
+    height: 98vh;
+    background: linear-gradient(#fff585, #ffff00, #ffd700, #ffa500, #ff0000);
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0px 0px 10px 0px #AAA;
+    box-shadow: 0px 0px 10px 0px #FF725E;
 }
 
 input{
     width: 100%;
     box-sizing: border-box;
-    padding: 5px;
-    margin-bottom: 10px;
+    padding: 0.8rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    background-color: #fff585;
+    color: #000;
+    border: none;
+    outline-color:#FF725E;
 }
 
-button {
-    margin-bottom: 20px;
+input:hover{
+    padding: 0.8rem;
+    border-radius: 10px;
+    background-color: #fff585;
+    box-shadow: 0px 0px 10px 0px #FFF;
 }
+
 
 #quantidade {
-    text-align: center;
-    width: 20vw;
-    height: 90vh;
-    background: linear-gradient(#ffff00, #ffa500, #ff0000);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 24vw;
+    height: 98vh;
+    background: linear-gradient(#ffff00, #ffd700, #ffa500, #ff0000);
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0px 0px 10px 0px #AAA;
+    box-shadow: 0px 0px 10px 0px #ffa500;
+}
+
+#quantidade h3 {
+    margin-top: 0;
+    margin-bottom: 0.3rem;
 }
 
 
+#quantidade p {
+     margin-bottom: 0.2rem;
+}
+
+
+ button {
+    padding: 0.5rem;
+    border-radius: 10px;
+    color: #000;
+    border: 2px solid #FF725E;
+    background-color: #fff585;
+}
+
+button:hover{
+    padding: 0.5rem;
+    border-radius: 10px;
+    color: #AAA;
+    border: 2px solid #FF725E;
+    background-color: #fff585;
+    box-shadow: 0px 0px 10px 0px #ffa500;
+}
+
+.box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    padding: 0.3rem;
+    background-color: #fff585;
+    border: 3px solid #FF725E;
+    border-radius: 10px;
+}
+
 small{
-    color: red;
+    color: #ff0000;
 }
 
 #custo {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    width: 20vw;
-    height: 90vh;
-    background: linear-gradient(#ffff00, #ffa500, #ff0000);
+    width: 24vw;
+    height: 98vh;
+    background: linear-gradient(#ffd700, #ffa500, #ff0000);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 0px 10px 0px #AAA;
 }
 
 #resultado {
-    text-align: center;
-    width: 20vw;
-    height: 90vh;
-    background: linear-gradient(#ffff00, #ffa500, #ff0000);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 24vw;
+    height: 98vh;
+    background: linear-gradient(#ffa500, #ff0000);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 0px 10px 0px #AAA;
+}
+
+.resultado-box {
+    width: 100%;
+    border: 3px solid #FF725E;
+    background-color: #fff585;
+    border-radius: 10px;
 }
