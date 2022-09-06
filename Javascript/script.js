@@ -4,7 +4,32 @@ let qtCriancas = document.getElementById("crianca");
 let qtDuracao = document.getElementById("duracao");
 let duracao = qtDuracao.value;
 let quantidade = document.getElementById("quantidade");
+let show = document.getElementById("quantidade");
 // ________________________________________________________________________________________________________
+
+function mostrarQuantidade() {
+   let show = document.getElementById("quantidade");
+        if (show.style.display = "none") {
+            show.style.display = "flex";
+        }
+}
+
+function mostrarCusto() {
+    let show = document.getElementById("custo");
+         if (show.style.display = "none") {
+             show.style.display = "flex";
+         }
+ }
+
+ function mostrarResultado() {
+    let show = document.getElementById("resultado");
+         if (show.style.display = "none") {
+             show.style.display = "flex";
+         }
+ }
+ 
+
+
 
 
 // função para fazer os calculos da quantidade de carnes, bebidas, acompanhamentos e suprimentos
@@ -37,62 +62,62 @@ function calcular() {
 
 
     // adicionando os mantimentos na div "quantidade" e colocando o botão para fazer o culculo do custo
-   
-    quantidade.innerHTML = `<h3>Tipos de Carnes</h3>`; 
-    quantidade.innerHTML += 
-    `<div class="box">
+    quantidade.innerHTML = `<h3>Tipos de Carnes</h3>`;
+    quantidade.innerHTML +=
+        `<div class="box">
     <img src="../IMG/meat.svg" width="45"/>
       <p>${carneTT} kg de Carne</p>
     </div>`;
-   
-    quantidade.innerHTML += 
-    `<div class="box">
+
+    quantidade.innerHTML +=
+        `<div class="box">
     <img src="../IMG/sausage.svg" width="45"/>
       <p>${linguicaTT} kg de Linguiça</p>
     </div>`;
 
-    quantidade.innerHTML += 
-    `<div class="box">
+    quantidade.innerHTML +=
+        `<div class="box">
     <img src="../IMG/chicken.svg" width="45"/>
       <p>${frangoTT} kg de Frango</p>
     </div>`;
 
     quantidade.innerHTML += `<h3>Bebidas</h3>`;
-    quantidade.innerHTML += 
-    `<div class="box">
+    quantidade.innerHTML +=
+        `<div class="box">
     <img src="../IMG/beer.svg" width="45"/>
       <p>${cervejaTT} Latas de Cerveja (355 ml)</p>
     </div>`;
 
-    quantidade.innerHTML += 
-    `<div class="box">
+    quantidade.innerHTML +=
+        `<div class="box">
     <img src="../IMG/soda.svg" width="45"/>
       <p>${bebidaTT} Refrigerante (2L)</p>
     </div>`;
 
     quantidade.innerHTML += `<h3>Suprimentos</h3>`;
 
-    quantidade.innerHTML += 
-    `<div class="box">
+    quantidade.innerHTML +=
+        `<div class="box">
     <img src="../IMG/coal.svg" width="45"/>
       <p>${carvao()} Kg Carvão</p>
     </div>`;
 
-    quantidade.innerHTML += 
-    `<div class="box">
+    quantidade.innerHTML +=
+        `<div class="box">
     <img src="../IMG/cutlery.svg" width="45"/>
       <p>${descartaveisTT} Descartáveis (un)<br>
       <small> Descartaveis = pratos, talheres, copos</small></p>
     </div>`;
 
     quantidade.innerHTML += `<button onclick="custar()">Custo (R$)</button>`;
+    mostrarQuantidade();
 }
 // __________________________________________________________________________________________________________________
 
 
 // função para fazer o calculo do custo
 function custar() {
-  
+
     // criando os inputs de custo
 
     //                                                        Tipos de Carnes
@@ -109,36 +134,37 @@ function custar() {
     custo.innerHTML += `<input id="valorCarvao" name="valorCarvao" type="number" placeholder="Preço por Kg de carvão"></input>`;
     custo.innerHTML += `<input id="valorDescartaveis" name="valorDescartaveis" type="number" placeholder="Preço dos Descartaveis (UN)"></input>`;
     custo.innerHTML += `<button onclick="calculoTT()">Calcular (R$)</button>`;
+    mostrarCusto();
 
 }
 //____________________________________________________________________________________________________________________
 
 // adicionando os custos do churrasco na div resultado
 function calculoTT() {
-      // selecionando o valor dos inputs
-      let adulto = qtAdultos.value;
-      let crianca = qtCriancas.value;
-      let duracao = qtDuracao.value;
-  
-      // fazendo a soma e a conversão dos mantimentos
-      //                                Tipos de Carnes
-      let carneTT = (adulto * carnePP(duracao) + (crianca * carnePP(duracao) / 2)) / 1000;
-      let linguicaTT = (adulto * linguicaPP(duracao) + (crianca * linguicaPP(duracao) / 2)) / 1000;
-      let frangoTT = (adulto * frangoPP(duracao) + (crianca * frangoPP(duracao) / 2)) / 1000;
-  
-      //                                bebidas
-      let cervejaTT = (adulto * cervejaPP(duracao)) / 355;
-      cervejaTT = Math.ceil(cervejaTT);
-      let bebidaTT = (adulto * bebidaPP(duracao) + (crianca * bebidaPP(duracao) / 2)) / 2000;
-      bebidaTT = Math.ceil(bebidaTT);
-  
-      //                                suprimentos
-      let descartaveisTT = (adulto * descartaveisPP(duracao) + (crianca * descartaveisPP(duracao)));
-  
-      // A proporção do carvão é calculada levando em consideração a quantidade de carne 
-      function carvao() {
-          return 1.5 * (carneTT + linguicaTT + frangoTT)
-      }
+    // selecionando o valor dos inputs
+    let adulto = qtAdultos.value;
+    let crianca = qtCriancas.value;
+    let duracao = qtDuracao.value;
+
+    // fazendo a soma e a conversão dos mantimentos
+    //                                Tipos de Carnes
+    let carneTT = (adulto * carnePP(duracao) + (crianca * carnePP(duracao) / 2)) / 1000;
+    let linguicaTT = (adulto * linguicaPP(duracao) + (crianca * linguicaPP(duracao) / 2)) / 1000;
+    let frangoTT = (adulto * frangoPP(duracao) + (crianca * frangoPP(duracao) / 2)) / 1000;
+
+    //                                bebidas
+    let cervejaTT = (adulto * cervejaPP(duracao)) / 355;
+    cervejaTT = Math.ceil(cervejaTT);
+    let bebidaTT = (adulto * bebidaPP(duracao) + (crianca * bebidaPP(duracao) / 2)) / 2000;
+    bebidaTT = Math.ceil(bebidaTT);
+
+    //                                suprimentos
+    let descartaveisTT = (adulto * descartaveisPP(duracao) + (crianca * descartaveisPP(duracao)));
+
+    // A proporção do carvão é calculada levando em consideração a quantidade de carne 
+    function carvao() {
+        return 1.5 * (carneTT + linguicaTT + frangoTT)
+    }
 
     // selecionando os valores dos inputs de custo
     let valorCarne = document.getElementById("valorCarne").value;
@@ -173,35 +199,36 @@ function calculoTT() {
     let custoTT = custoCarne + custoLinguica + custoFrango + custoCerveja + custoRefrigerante + custoCarvao + (custoDescartaveis);
     custoTT = Math.ceil(custoTT);
 
-    resultado.innerHTML += 
-    `<div class="resultado-box">
+    resultado.innerHTML +=
+        `<div class="resultado-box">
     <h3>Custo das Carnes</h3>
     <p>R$ ${custoCarne},00 de Carne</p>
     <p>R$ ${custoLinguica},00 de Linguiça</p>
     <p>R$ ${custoFrango},00 de Frango</p>
     </div>`;
 
-    resultado.innerHTML += 
-    `<div class="resultado-box">
+    resultado.innerHTML +=
+        `<div class="resultado-box">
     <h3>Custo das Bebidas</h3>
     <p>R$ ${custoCerveja},00 de Cerveja</p>
     <p>R$ ${custoRefrigerante},00 de Refrigerante</p>
     </div>`;
 
-    resultado.innerHTML += 
-    `<div class="resultado-box">
+    resultado.innerHTML +=
+        `<div class="resultado-box">
     <h3>Custo dos Suprimentos</h3>
     <p>R$ ${custoCarvao},00 de Carvão</p>
     <p>R$ ${custoDescartaveis},00 dos Descartáveis</p>
     </div>`;
 
-    resultado.innerHTML += 
-    `<div class="resultado-box">
+    resultado.innerHTML +=
+        `<div class="resultado-box">
     <h3>Custo Total</h3>
     <p>R$ ${custoTT},00 do Churrasco</p>
     </div>`;
 
     resultado.innerHTML += `<button onclick="location.reload()">Nova Cotação</button>`;
+    mostrarResultado();
 }
 
 // conjunto de funções para determinar a quantidade de mantimentos por pessoas levando
