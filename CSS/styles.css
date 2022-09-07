@@ -131,3 +131,15 @@ small{
     background-color: #fff585;
     border-radius: 10px;
 }
+
+@media screen and (max-width:950px) {
+    main{
+        display: block;
+    }
+
+    .container, .classe1{
+        width: 100%;
+        margin-bottom: 1rem;
+        margin-left: 0;
+    }
+}

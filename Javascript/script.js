@@ -121,13 +121,13 @@ function custar() {
     // criando os inputs de custo
 
     //                                                        Tipos de Carnes
-    custo.innerHTML = `<h3>Incira os preços de cada item</h3>`;
+    custo.innerHTML = `<h3>Coloque os preços de cada item</h3>`;
     custo.innerHTML += `<input id="valorCarne" name="ValorCarne" type="number" placeholder="Preço por KG de Carne" value=""></input>`;
     custo.innerHTML += `<input id="valorLinguica" name="valorLinguica" type="number" placeholder="Preço por KG de Linguiça"></input>`;
     custo.innerHTML += `<input id="valorFrango" name="valorFrango" type="number" placeholder="Preço por KG de Frango"></input>`;
 
     //                                                        Bebidas
-    custo.innerHTML += `<input id="valorCerveja" name="valorCerveja" type="number" placeholder="Preço da Lata de Cerveja(355ml)"></input>`;
+    custo.innerHTML += `<input id="valorCerveja" name="valorCerveja" type="number" placeholder="Preço Lata de Cerveja(355ml)"></input>`;
     custo.innerHTML += `<input id="valorRefrigerante" name="valorRefrigerante" type="number" placeholder="Preço da Garrafa (2L)"></input>`;
 
     //                                                        Suprimentos
