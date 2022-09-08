@@ -132,14 +132,41 @@ small{
     border-radius: 10px;
 }
 
-@media screen and (max-width:950px) {
+@media screen and (max-width:1115px) {
     main{
         display: block;
     }
 
     .container, .classe1{
-        width: 100%;
+        width: 70%;
+        height: 100%;
         margin-bottom: 1rem;
-        margin-left: 0;
+        margin: auto;
     }
+
+    .container img {
+        width: 21rem;
+    }
+
+    @media screen and (max-width:550px){
+        main {
+            display: block;
+        }      
+
+        .container, .classe1 {
+            width: 100%;
+            margin-bottom: 1rem;
+            margin: none;
+        }
+        .container img {
+            width: 21rem;
+        }
+    }
+
+    @media screen and (max-width:375px){
+        .container img {
+            width: auto;
+        }
+    }
+
 }
