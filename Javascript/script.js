@@ -7,6 +7,8 @@ let quantidade = document.getElementById("quantidade");
 let show = document.getElementById("quantidade");
 // ________________________________________________________________________________________________________
 
+
+// funções para mostrar as divs de forma dinamica
 function mostrarQuantidade() {
    let show = document.getElementById("quantidade");
         if (show.style.display = "none") {
@@ -27,11 +29,8 @@ function mostrarCusto() {
              show.style.display = "flex";
          }
  }
+// __________________________________________________________________________________________________________________
  
-
-
-
-
 // função para fazer os calculos da quantidade de carnes, bebidas, acompanhamentos e suprimentos
 function calcular() {
     // selecionando o valor dos imputs
@@ -110,6 +109,7 @@ function calcular() {
     </div>`;
 
     quantidade.innerHTML += `<button onclick="custar()">Custo (R$)</button>`;
+
     mostrarQuantidade();
 }
 // __________________________________________________________________________________________________________________
@@ -134,8 +134,8 @@ function custar() {
     custo.innerHTML += `<input id="valorCarvao" name="valorCarvao" type="number" placeholder="Preço por Kg de carvão"></input>`;
     custo.innerHTML += `<input id="valorDescartaveis" name="valorDescartaveis" type="number" placeholder="Preço dos Descartaveis (UN)"></input>`;
     custo.innerHTML += `<button onclick="calculoTT()">Calcular (R$)</button>`;
-    mostrarCusto();
 
+    mostrarCusto();
 }
 //____________________________________________________________________________________________________________________
 

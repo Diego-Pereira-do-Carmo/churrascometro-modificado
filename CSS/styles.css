@@ -1,27 +1,32 @@
-*{
+/* selecionando a fonte */
+* {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* colocando a cor de funto da pagina */
 body {
     display: flex;
     background-color: #fff585;
 }
 
-main{
+/* centralizando a tag main na tela e definindo o seu tamanho*/
+main {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     text-align: center;
     width: 100vw;
     height: 97vh;
 }
 
- #logo-container {
+/* definindo o tamanho da imagem  */
+#logo-container {
     width: 100%;
     margin-bottom: 3rem;
- }
+}
 
-.container{
+/* Estilizando o container */
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,7 +39,8 @@ main{
     box-shadow: 0px 0px 10px 0px #FF725E;
 }
 
-input{
+/* definindo o estilo de todos os inputs */
+input {
     width: 80%;
     box-sizing: border-box;
     padding: 0.8rem;
@@ -43,23 +49,25 @@ input{
     background-color: #fff585;
     color: #000;
     border: none;
-    outline-color:#FF725E;
+    outline-color: #FF725E;
 }
 
-input:hover{
+/* adicionando estilo para destacar o input quando o mause estiver no elemento*/
+input:hover {
     padding: 0.8rem;
     border-radius: 10px;
     background-color: #fff585;
     box-shadow: 0px 0px 10px 0px #FFF;
 }
 
+/* estilizando as divs e adicionando a animação de entrada da div*/
 .classe1 {
     -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -73,15 +81,28 @@ input:hover{
     box-shadow: 0px 0px 10px 0px #ffa500;
 }
 
+/* animação das divs */
 @-webkit-keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+    0% {
+        opacity: 0;
     }
-    @keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-    } 
 
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* redefinindo a marigin dos elementos h3 */
 #quantidade h3 {
     margin-top: 0;
     margin-bottom: 0.3rem;
@@ -89,11 +110,11 @@ input:hover{
 
 
 #quantidade p {
-     margin-bottom: 0.2rem;
+    margin-bottom: 0.2rem;
 }
 
-
- button {
+/* estilizando os botões e adicionando um estilo para destacar quando o mause estiver no elemento*/
+button {
     padding: 0.5rem;
     border-radius: 10px;
     color: #000;
@@ -101,7 +122,7 @@ input:hover{
     background-color: #fff585;
 }
 
-button:hover{
+button:hover {
     padding: 0.5rem;
     border-radius: 10px;
     color: #AAA;
@@ -110,6 +131,7 @@ button:hover{
     box-shadow: 0px 0px 10px 0px #ffa500;
 }
 
+/* div dos icones, estilizando e definindo tamanho */
 .box {
     width: 100%;
     display: flex;
@@ -121,10 +143,12 @@ button:hover{
     border-radius: 10px;
 }
 
-small{
+/* destacando texto de alerta dos descartaveis */
+small {
     color: #ff0000;
 }
 
+/* estilo da div que apresenta o resultado de todos os calculos */
 .resultado-box {
     width: 100%;
     border: 3px solid #FF725E;
@@ -132,12 +156,14 @@ small{
     border-radius: 10px;
 }
 
+/* dando responsividade para a pagina */
 @media screen and (max-width:1115px) {
-    main{
+    main {
         display: block;
     }
 
-    .container, .classe1{
+    .container,
+    .classe1 {
         width: 70%;
         height: 100%;
         margin-bottom: 1rem;
@@ -148,22 +174,24 @@ small{
         width: 21rem;
     }
 
-    @media screen and (max-width:550px){
+    @media screen and (max-width:550px) {
         main {
             display: block;
-        }      
+        }
 
-        .container, .classe1 {
+        .container,
+        .classe1 {
             width: 100%;
             margin-bottom: 1rem;
             margin: none;
         }
+
         .container img {
             width: 21rem;
         }
     }
 
-    @media screen and (max-width:375px){
+    @media screen and (max-width:375px) {
         .container img {
             width: auto;
         }
