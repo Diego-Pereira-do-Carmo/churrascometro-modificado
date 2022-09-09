@@ -64,32 +64,32 @@ function calcular() {
     quantidade.innerHTML = `<h3>Tipos de Carnes</h3>`;
     quantidade.innerHTML +=
         `<div class="box">
-    <img src="../IMG/meat.svg" width="45"/>
+    <img src="./IMG/meat.svg" width="45"/>
       <p>${carneTT} kg de Carne</p>
     </div>`;
 
     quantidade.innerHTML +=
         `<div class="box">
-    <img src="../IMG/sausage.svg" width="45"/>
+    <img src="./IMG/sausage.svg" width="45"/>
       <p>${linguicaTT} kg de Linguiça</p>
     </div>`;
 
     quantidade.innerHTML +=
         `<div class="box">
-    <img src="../IMG/chicken.svg" width="45"/>
+    <img src="./IMG/chicken.svg" width="45"/>
       <p>${frangoTT} kg de Frango</p>
     </div>`;
 
     quantidade.innerHTML += `<h3>Bebidas</h3>`;
     quantidade.innerHTML +=
         `<div class="box">
-    <img src="../IMG/beer.svg" width="45"/>
+    <img src="./IMG/beer.svg" width="45"/>
       <p>${cervejaTT} Latas de Cerveja (355 ml)</p>
     </div>`;
 
     quantidade.innerHTML +=
         `<div class="box">
-    <img src="../IMG/soda.svg" width="45"/>
+    <img src="./IMG/soda.svg" width="45"/>
       <p>${bebidaTT} Refrigerante (2L)</p>
     </div>`;
 
@@ -97,13 +97,13 @@ function calcular() {
 
     quantidade.innerHTML +=
         `<div class="box">
-    <img src="../IMG/coal.svg" width="45"/>
+    <img src="./IMG/coal.svg" width="45"/>
       <p>${carvao()} Kg Carvão</p>
     </div>`;
 
     quantidade.innerHTML +=
         `<div class="box">
-    <img src="../IMG/cutlery.svg" width="45"/>
+    <img src="./IMG/cutlery.svg" width="45"/>
       <p>${descartaveisTT} Descartáveis (un)<br>
       <small> Descartaveis = pratos, talheres, copos</small></p>
     </div>`;
