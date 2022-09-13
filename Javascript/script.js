@@ -108,7 +108,7 @@ function calcular() {
       <small> Descartaveis = pratos, talheres, copos</small></p>
     </div>`;
 
-    quantidade.innerHTML += `<button onclick="custar()">Custo (R$)</button>`;
+    quantidade.innerHTML += `<a href="#custo"><button onclick="custar()">Custo (R$)</button></a>`;
 
     mostrarQuantidade();
 }
@@ -133,7 +133,7 @@ function custar() {
     //                                                        Suprimentos
     custo.innerHTML += `<input id="valorCarvao" name="valorCarvao" type="number" placeholder="Preço por Kg de carvão"></input>`;
     custo.innerHTML += `<input id="valorDescartaveis" name="valorDescartaveis" type="number" placeholder="Preço dos Descartaveis (UN)"></input>`;
-    custo.innerHTML += `<button onclick="calculoTT()">Calcular (R$)</button>`;
+    custo.innerHTML += `<a href="#resultado"><button onclick="calculoTT()">Calcular (R$)</button></a>`;
 
     mostrarCusto();
 }
